@@ -1,0 +1,42 @@
+    	    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+
+
+    </head>
+
+    <body>
+
+{% block responce %}
+
+<p class="pink-text center" id="numbers" >{{listNum}}</p>
+<a  onclick="copyFunction()" class="waves-effect waves-light btn center-align ">Press Me To Copy</a>
+
+<script type="text/javascript">
+	function copyFunction(){
+  	var copyText = document.getElementById("numbers");
+		copyText.select()
+		document.execCommand("Copy");
+		alert("Numbers Have been copied" +copyText.value);
+	}
+</script>
+
+<h5 class=" pink-text center">The sum of the generated list: {{sum}} </h5>
+
+
+
+
+
+
+</body>
+{% endblock responce %}
